@@ -1,0 +1,30 @@
+<div>
+	<h3><a href="{{post.link}}">{{post.title}}</a></h3>
+
+	<div> {{post.description}} </div>
+
+	<p>Author: <a href="">{{post.author.username}}</a></p>
+</div>
+
+<hr />
+
+<h3>New Comments</h3>
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Comment</label>
+     <input type="hidden" ng-model="comment.post" ng-value="{{post._id}}" />
+   <textarea class="form-control" rows="3" ng-model="comment.description"></textarea>
+  </div>
+  <button type="submit" ng-click="addComment(post.author._id, post._id, comment)" class="btn btn-default">Submit</button>
+</form>
+
+<hr />
+<h3>Comment</h3>
+
+<div ng-repeat="comment in post.comments" class="comment">
+
+	<p>{{comment.description}}</p>
+	<p>Comment by: <b>{{ comment.author.username }}</b> <span>on {{comment.updated}}</span></p>
+	<hr />
+</div>

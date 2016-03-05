@@ -1,0 +1,17 @@
+<h1>Login</h1>
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" ng-model="loginModel.email" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" ng-model="loginModel.password" placeholder="Password">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Remember password
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="login(loginModel)">Submit</button>
+</form>
