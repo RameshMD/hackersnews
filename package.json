@@ -8,7 +8,10 @@
   },
   "scripts": {
     "start": "nodemon server.js",
-    "test": ""
+    "postinstall": "./node_modules/.bin/bower install"
+  },
+  "engines": {
+    "node": "5.2.0"
   },
   "author": "Raja Sekar <rajasekar89be@gmail.com> (http://rajasekarm.com)",
   "license": "ISC",
